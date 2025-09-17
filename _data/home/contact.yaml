@@ -1,0 +1,12 @@
+email: kvitkapublishing@gmail.com
+phone: "+380961671676"
+social:
+  - name: Instagram
+    icon: /assets/svg/instagram.svg
+    url: https://www.instagram.com/kvitkabooks
+  - name: Threads
+    icon: /assets/svg/threads.svg
+    url: https://www.threads.com/@kvitkabooks
+  - name: TikTok
+    icon: /assets/svg/tiktok.svg
+    url: https://www.tiktok.com/@kvitkabooks

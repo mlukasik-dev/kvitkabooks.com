@@ -1,0 +1,17 @@
+title: Видавництво Квітка
+lang: uk
+url: https://kvitkabooks.com
+description: Квітка - тут видають красиві книги ✨
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - AGENTS.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - node_modules
+  - postcss.config.js
+  - tailwind.config.js
