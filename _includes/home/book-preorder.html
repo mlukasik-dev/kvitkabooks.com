@@ -1,0 +1,90 @@
+<section id="book" class="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-[#FFF8F0] to-[#F5DEB3]/10">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+      <div class="relative">
+        <div class="aspect-[4/3] relative overflow-hidden rounded-2xl shadow-2xl">
+          <img src="/assets/images/book.png"
+               alt="{{ site.data.home.book.title }}"
+               class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#31381C]/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+
+        <div class="absolute -top-4 -right-4 md:-left-4 md:right-auto bg-[#F6B7BE] text-[#31381C] rounded-full px-4 py-2 font-fixel-display font-semibold text-sm rotate-12 md:-rotate-12 shadow-lg">
+          Передзамовлення
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <h1 class="font-kudry text-4xl md:text-5xl lg:text-6xl text-[#31381C] mb-2">
+            {{ site.data.home.book.title }}
+          </h1>
+          <p class="font-fixel-text text-[#4B3226] text-lg">
+            Вихід книги: <span class="font-semibold">{{ site.data.home.book.release_date }}</span>
+          </p>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <p class="font-fixel-text text-[#31381C]/90 leading-relaxed">
+            {{ site.data.home.book.about }}
+          </p>
+        </div>
+
+        <div class="border-l-4 border-[#F5DEB3] pl-6 py-2">
+          <details class="group">
+            <summary class="cursor-pointer list-none">
+              <div class="flex items-center gap-4">
+                {% if site.data.home.book.author.image %}
+                <img src="{{ site.data.home.book.author.image }}"
+                     alt="{{ site.data.home.book.author.name }}"
+                     class="w-16 h-16 rounded-full object-cover ring-4 ring-[#F5DEB3]/30 shadow-md">
+                {% endif %}
+                <div class="flex-1">
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-fixel-display font-semibold text-lg text-[#31381C]">
+                      {{ site.data.home.book.author.name }}
+                    </h3>
+                    <svg class="w-4 h-4 text-[#31381C]/50 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                  <p class="text-sm text-[#4B3226]/80 font-fixel-text mt-0.5">Автор книги</p>
+                </div>
+              </div>
+            </summary>
+
+            <div class="mt-4 ml-20 pr-4">
+              <p class="font-fixel-text text-[#31381C]/80 leading-relaxed text-sm">
+                {{ site.data.home.book.author.about }}
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="bg-white/50 rounded-xl p-6 border border-[#31381C]/10">
+          <div class="flex items-baseline gap-4 mb-3">
+            {% if site.data.home.book.price.old %}
+            <span class="text-2xl text-[#31381C]/40 line-through font-fixel-display">
+              {{ site.data.home.book.price.old }} грн
+            </span>
+            {% endif %}
+            <span class="text-3xl font-bold text-[#31381C] font-fixel-display">
+              {{ site.data.home.book.price.current }} грн
+            </span>
+          </div>
+          {% if site.data.home.book.price.discount_text %}
+          <p class="text-sm text-[#4B3226] font-fixel-text mb-4">
+            {{ site.data.home.book.price.discount_text }}
+          </p>
+          {% endif %}
+
+          <button id="preorder-btn"
+                  class="w-full bg-[#31381C] text-[#FFF8F0] py-4 px-6 rounded-lg font-fixel-display font-semibold text-lg hover:bg-[#4B3226] transition-all duration-300 hover:shadow-xl transform hover:-translate-y-0.5">
+            Оформити передзамовлення
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,136 @@
+<header class="sticky top-0 z-50 bg-[#FFF8F0] border-b border-[#31381C]/10">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="flex items-center justify-between">
+      <a href="/" class="flex items-center group">
+        <img src="/assets/svg/logo-full.svg" alt="Видавництво Квітка" class="h-16 md:h-20 lg:h-24 w-auto">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#book" class="nav-link font-fixel-text text-[#31381C] hover:text-[#4B3226] transition-all duration-300 relative pb-1">
+          Книга
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#4B3226] transition-all duration-300 nav-underline"></span>
+        </a>
+        <a href="#about" class="nav-link font-fixel-text text-[#31381C] hover:text-[#4B3226] transition-all duration-300 relative pb-1">
+          Про нас
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#4B3226] transition-all duration-300 nav-underline"></span>
+        </a>
+        <a href="#contact" class="nav-link font-fixel-text text-[#31381C] hover:text-[#4B3226] transition-all duration-300 relative pb-1">
+          Контакти
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#4B3226] transition-all duration-300 nav-underline"></span>
+        </a>
+      </nav>
+
+      <button class="md:hidden text-[#31381C] p-2 hover:bg-[#31381C]/5 rounded-lg transition-colors duration-200" id="mobile-menu-toggle" aria-label="Toggle menu">
+        <svg class="w-6 h-6 menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg class="w-6 h-6 close-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden fixed inset-0 z-40 pointer-events-none">
+    <div class="mobile-menu-backdrop absolute inset-0 bg-[#31381C]/40 opacity-0 transition-opacity duration-300"></div>
+
+    <nav class="mobile-menu-panel absolute right-0 top-0 h-full w-[280px] bg-[#FFF8F0] transform translate-x-full transition-transform duration-300 ease-out shadow-2xl">
+      <div class="flex flex-col h-full">
+        <div class="p-6 border-b border-[#31381C]/10">
+          <img src="/assets/svg/logo-text.svg" alt="Квітка" class="h-12 w-auto mx-auto">
+        </div>
+
+        <div class="flex-1 overflow-y-auto py-8">
+          <div class="flex flex-col space-y-1 px-4">
+            <a href="#book" class="mobile-nav-link group flex items-center justify-between px-4 py-4 font-fixel-display text-lg text-[#31381C] hover:bg-[#F5DEB3]/20 rounded-lg transition-all duration-200">
+              <span>Книга</span>
+              <svg class="w-5 h-5 text-[#4B3226] opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#about" class="mobile-nav-link group flex items-center justify-between px-4 py-4 font-fixel-display text-lg text-[#31381C] hover:bg-[#F5DEB3]/20 rounded-lg transition-all duration-200">
+              <span>Про нас</span>
+              <svg class="w-5 h-5 text-[#4B3226] opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#contact" class="mobile-nav-link group flex items-center justify-between px-4 py-4 font-fixel-display text-lg text-[#31381C] hover:bg-[#F5DEB3]/20 rounded-lg transition-all duration-200">
+              <span>Контакти</span>
+              <svg class="w-5 h-5 text-[#4B3226] opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 border-t border-[#31381C]/10">
+          <div class="flex items-center justify-center space-x-4">
+            <img src="/assets/svg/tryzub.svg" alt="Ukrainian Trident" class="h-6 w-auto opacity-50">
+            <span class="font-kudry text-sm text-[#31381C]/60">Українське видавництво</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const backdrop = menu.querySelector('.mobile-menu-backdrop');
+    const panel = menu.querySelector('.mobile-menu-panel');
+    const menuIcon = toggle.querySelector('.menu-icon');
+    const closeIcon = toggle.querySelector('.close-icon');
+    const navLinks = menu.querySelectorAll('.mobile-nav-link');
+    let isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      menu.classList.remove('pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      panel.classList.remove('translate-x-full');
+      menuIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      backdrop.classList.remove('opacity-100');
+      panel.classList.add('translate-x-full');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      document.body.style.overflow = '';
+
+      setTimeout(() => {
+        if (!isOpen) {
+          menu.classList.add('pointer-events-none');
+        }
+      }, 300);
+    }
+
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    backdrop.addEventListener('click', closeMenu);
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        closeMenu();
+      });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isOpen) {
+        closeMenu();
+      }
+    });
+  });
+</script>
