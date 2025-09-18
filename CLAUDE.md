@@ -16,7 +16,7 @@ Ukrainian book publisher landing page built with Jekyll and Tailwind CSS v4 for 
 
 ### Assets
 - **assets/css/main.css** - Tailwind CSS v4 imports and @font-face
-- **assets/images/** - Book cover with 4/3 ratio (width/height) (`book.png`), author photo (`author.jpg`)
+- **assets/images/** - Book cover with 4/3 ratio (width/height) (`book.webp`), author photo (`author.jpg`)
 - **assets/svg/** - Logos: `logo.svg` (icon), `logo-text.svg` (text), `logo-full.svg` (complete) and social icons (`instagram.svg`, `threads.svg`, `tiktok.svg`)
 - **assets/fonts/** - Fixel Display/Text (sans), Kudry Weird (serif)
 

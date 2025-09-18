@@ -1,0 +1,27 @@
+<div class="mb-12 text-center">
+  <div class="inline-flex items-center justify-center mb-6">
+    <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#F5DEB3]/20 flex items-center justify-center">
+      {% if page.icon == 'returns' %}
+      <svg class="w-6 h-6 md:w-8 md:h-8 text-[#31381C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+      {% elsif page.icon == 'offer' %}
+      <svg class="w-6 h-6 md:w-8 md:h-8 text-[#31381C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      {% endif %}
+    </div>
+  </div>
+
+  <h1 class="font-kudry text-3xl md:text-4xl lg:text-5xl text-[#31381C] mb-4">
+    {{ page.title }}
+  </h1>
+
+  <div class="w-24 h-1 bg-[#F5DEB3] mx-auto mb-6"></div>
+
+  {% if page.updated %}
+  <p class="font-fixel-text text-sm text-[#4B3226]/70">
+    Оновлено: {{ page.updated | date: "%-d %B %Y" | replace: "January", "січня" | replace: "February", "лютого" | replace: "March", "березня" | replace: "April", "квітня" | replace: "May", "травня" | replace: "June", "червня" | replace: "July", "липня" | replace: "August", "серпня" | replace: "September", "вересня" | replace: "October", "жовтня" | replace: "November", "листопада" | replace: "December", "грудня" }}
+  </p>
+  {% endif %}
+</div>
