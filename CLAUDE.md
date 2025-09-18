@@ -21,7 +21,7 @@ Ukrainian book publisher landing page built with Jekyll and Tailwind CSS v4 for 
 - **assets/fonts/** - Fixel Display/Text (sans), Kudry Weird (serif)
 
 ### Configuration
-- **_config.yml** - Jekyll settings (title: "Видавництво Квітка", url: kvitkabooks.com, lang: uk)
+- **_config.yml** - Jekyll settings (title: "Видавництво «Квітка»", url: kvitkabooks.com, lang: uk)
 
 ## Brand Guidelines
 
