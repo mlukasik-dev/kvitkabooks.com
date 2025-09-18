@@ -8,6 +8,8 @@
   <meta name="description" content="{{ site.description | default: 'Видавництво Квітка - класичні історії у вишуканих обкладинках' }}">
 
   <link href="/assets/css/main.css" rel="stylesheet">
+
+  {% include seo.html %}
 </head>
 <body class="bg-[#FFF8F0]">
   {% include home/header.html %}
@@ -20,14 +22,6 @@
   {% include home/footer.html %}
 
   <script>
-    document.getElementById('mobile-menu-toggle')?.addEventListener('click', function() {
-      console.log('Mobile menu toggle clicked');
-    });
-
-    document.getElementById('preorder-btn')?.addEventListener('click', function() {
-      console.log('Preorder button clicked - implement modal here');
-    });
-
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

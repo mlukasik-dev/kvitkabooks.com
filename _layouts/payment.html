@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'uk' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <link href="/assets/css/main.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-[#FFF8F0] via-[#F5DEB3]/10 to-[#FFF8F0] min-h-screen flex items-center justify-center">
+  <div class="container mx-auto px-4 py-12">
+    <div class="max-w-md mx-auto">
+      <div class="text-center space-y-8">
+        <a href="/" class="inline-block">
+          <img src="/assets/svg/logo-full.svg" alt="Видавництво Квітка" class="h-20 w-auto mx-auto hover:opacity-90 transition-opacity">
+        </a>
+
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-[#31381C]/10 space-y-6">
+          {{ content }}
+        </div>
+
+        <p class="text-sm text-[#31381C]/60 font-fixel-text">
+          © {{ 'now' | date: '%Y' }} Видавництво Квітка
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
