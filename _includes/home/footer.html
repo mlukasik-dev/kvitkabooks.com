@@ -3,7 +3,7 @@
     <div class="grid md:grid-cols-3 gap-8 md:gap-12">
 
       <div class="space-y-1 text-center md:text-left">
-        <img src="/assets/svg/logo-text.svg" alt="Видавництво Квітка" class="h-16 text-[#31381C] mx-auto md:mx-0">
+        {% include svg/logo-text.svg class="h-16 w-auto text-[#4B3226]" %}
         <p class="font-kudry text-sm text-[#4B3226]">Тут видають красиві книги.</p>
       </div>
 
@@ -40,7 +40,7 @@
              rel="noopener noreferrer"
              class="w-10 h-10 rounded-full bg-[#31381C] text-[#FFF8F0] flex items-center justify-center hover:bg-[#4B3226] transition-all duration-300 hover:scale-110"
              aria-label="{{ social.name }}">
-            <img src="{{ social.icon }}" alt="{{ social.name }}" class="w-5 h-5 invert">
+            {% include svg/{{ social.icon }} class="w-5 h-5 text-[#FFF8F0]" %}
           </a>
           {% endfor %}
         </div>

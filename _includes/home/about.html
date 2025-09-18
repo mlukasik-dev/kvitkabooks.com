@@ -2,14 +2,9 @@
   <div class="container mx-auto px-4 lg:px-8">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-8 md:mb-12">
-        {% if site.data.home.about.logo %}
         <div class="mb-1">
-          <img src="{{ site.data.home.about.logo }}"
-               alt="Квітка"
-               class="h-16 md:h-20 mx-auto opacity-80 brightness-0 invert-[.95] sepia-[1] saturate-[200%] hue-rotate-[20deg]"
-               style="filter: brightness(0) saturate(100%) invert(95%) sepia(12%) saturate(639%) hue-rotate(5deg) brightness(102%) contrast(91%);">
+          {% include svg/logo.svg class="h-16 md:h-20 mx-auto text-[#F5DEB3]/80" %}
         </div>
-        {% endif %}
         <h2 class="font-kudry text-3xl md:text-4xl lg:text-5xl mb-4">
           {{ site.data.home.about.title }}
         </h2>
