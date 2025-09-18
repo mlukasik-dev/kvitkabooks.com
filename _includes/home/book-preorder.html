@@ -31,6 +31,36 @@
           </p>
         </div>
 
+        {% if site.data.home.book.details %}
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-fixel-text text-[#31381C]/60">
+          {% if site.data.home.book.details.pages %}
+          <div class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+              <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100-4h-.5a1 1 0 000-2H8a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2.5a1 1 0 000 2H14v9H8V5z" clip-rule="evenodd"></path>
+            </svg>
+            <span>{{ site.data.home.book.details.pages }}</span>
+          </div>
+          {% endif %}
+          {% if site.data.home.book.details.translator %}
+          <div class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Переклад: {{ site.data.home.book.details.translator }}</span>
+          </div>
+          {% endif %}
+          {% if site.data.home.book.details.cover_designer %}
+          <div class="flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Обкладинка: {{ site.data.home.book.details.cover_designer }}</span>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+
         <div class="border-l-4 border-[#F5DEB3] pl-6 py-2">
           <details class="group">
             <summary class="cursor-pointer list-none">

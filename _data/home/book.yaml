@@ -11,6 +11,10 @@ price:
   old: 599
   current: 499
   discount_text: Знижена ціна лише на період передзамовлення
+details:
+  pages: 424 сторінки
+  translator: Володимир Горбатько
+  cover_designer: Влада Майстер
 author:
   image: /assets/images/author.jpg
   name: Джейн Остін
