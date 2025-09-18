@@ -3,6 +3,9 @@ lang: uk
 url: https://kvitkabooks.com
 description: Квітка - тут видають красиві книги ✨
 
+plugins:
+  - jekyll-sitemap
+
 exclude:
   - README.md
   - CLAUDE.md
